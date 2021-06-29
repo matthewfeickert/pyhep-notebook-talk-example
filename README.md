@@ -47,6 +47,14 @@ This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP communi
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
 
+The following URL and badge will launch a Binder session built from the Zenodo archive
+
+```
+https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?filepath=talk.ipynb
+```
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
+
 ## Installation
 
 In a clean virtual environment install the dependencies (which are under the `binder` directory)
