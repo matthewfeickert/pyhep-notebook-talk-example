@@ -55,6 +55,8 @@ https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?filepath=talk.ipynb
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
 
+Once talks are published, the Zenodo DOI is the preferred way to launch Binder links so that it will be stable far into the future.
+
 ## Installation
 
 In a clean virtual environment install the dependencies (which are under the `binder` directory)
