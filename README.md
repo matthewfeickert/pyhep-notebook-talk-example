@@ -3,6 +3,7 @@
 Example repository structure for a PyHEP style "notebook talk"
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
+[![DOI](https://zenodo.org/badge/381276327.svg)](https://zenodo.org/badge/latestdoi/381276327)
 
 ## Minimum Required Setup
 
@@ -45,6 +46,16 @@ To do this:
 This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP community colleciton on Zenodo. c.f. [PyHEP 2020's Zenodo community](https://zenodo.org/communities/pyhep2020) as an example.
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
+
+The following URL and badge will launch a Binder session built from the Zenodo archive
+
+```
+https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?filepath=talk.ipynb
+```
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
+
+Once talks are published, the Zenodo DOI is the preferred way to launch Binder links so that it will be stable far into the future.
 
 ## Installation
 
