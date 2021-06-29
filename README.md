@@ -5,6 +5,11 @@ Example repository structure for a PyHEP style "notebook talk"
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
 [![DOI](https://zenodo.org/badge/381276327.svg)](https://zenodo.org/badge/latestdoi/381276327)
 
+## Presentation Resources
+
+Before getting into the specifics of how to setup a repository to make it runnable with Binder and preservable with Zenodo, it is a good idea to first think about how to give a talk with a Jupyter notebook.
+[Jim Pivarski](https://github.com/jpivarski) has a very good June 2021 PyHEP Topical meeting talk all about things to think about and consider when giving a talk with a Jupyter notebook: [How to give a good Jupyter talk](https://indico.cern.ch/event/1044648/)
+
 ## Minimum Required Setup
 
 The minimum setup required is simply a repository with the Jupyter notebook that you'll be using and the `requirements.txt` or environment config file that is used to specify and install all of your code's dependencies.
@@ -22,7 +27,7 @@ If a user just clicks that badge, the Binder build will run if there already isn
 Below is an example of a URL that will launch the `talk.ipynb` notebook in this repository into a JupyterLab environment.
 
 ```
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
+https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb
 ```
 
 and its badge
@@ -50,7 +55,7 @@ You can create a Binder launch URL **from a Zenodo DOI** which will build the Do
 The following URL and badge will launch a Binder session built from the Zenodo archive
 
 ```
-https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?filepath=talk.ipynb
+https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb
 ```
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
