@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
     - id: check-added-large-files
     - id: check-case-conflict
@@ -13,6 +13,7 @@ repos:
     - id: debug-statements
     - id: end-of-file-fixer
     - id: mixed-line-ending
+    - id: requirements-txt-fixer
     - id: trailing-whitespace
 
 -   repo: https://github.com/PyCQA/flake8
@@ -21,20 +22,21 @@ repos:
     - id: flake8
 
 -   repo: https://github.com/pycqa/isort
-    rev: 5.8.0
+    rev: 5.9.1
     hooks:
     - id: isort
 
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.15.0
+    rev: v2.19.4
     hooks:
     - id: pyupgrade
+      args: ["--py36-plus"]
 
 -   repo: https://github.com/nbQA-dev/nbQA
-    rev: 0.8.0
+    rev: 0.13.1
     hooks:
     - id: nbqa-pyupgrade
-      additional_dependencies: [pyupgrade==2.15.0]
+      additional_dependencies: [pyupgrade==2.19.4]
       args: ["--py36-plus"]
     - id: nbqa-isort
-      additional_dependencies: [isort==5.8.0]
+      additional_dependencies: [isort==5.9.1]
