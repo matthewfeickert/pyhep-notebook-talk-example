@@ -32,6 +32,20 @@ and its badge
 
 If you'd like to have your Binder badge [launch into a JupyterLab environment](https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab) instead of Jupyter Notebook have the URL end with `?urlpath=lab/tree/path-to-the-notebook-you-want.ipynb`.
 
+## Zenodo DOIs
+
+To preserve the repository with your talk as best as possible, have [Zenodo](https://zenodo.org/) build a Zenodo archive and mint a DOI for your repository.
+To do this:
+
+1. Create an account on [zenodo.org](https://zenodo.org/).
+2. [Follow the instructions](https://zenodo.org/account/settings/github/) on syncing GitHub repositories that you control with Zenodo.
+3. Create a new GitHub release to trigger an archive capture.
+4. Add the minted DOI to your repository as a badge.
+
+This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP community colleciton on Zenodo. c.f. [PyHEP 2020's Zenodo community](https://zenodo.org/communities/pyhep2020) as an example.
+
+You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
+
 ## Installation
 
 In a clean virtual environment install the dependencies (which are under the `binder` directory)
