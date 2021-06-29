@@ -3,6 +3,7 @@
 Example repository structure for a PyHEP style "notebook talk"
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
+[![DOI](https://zenodo.org/badge/381276327.svg)](https://zenodo.org/badge/latestdoi/381276327)
 
 ## Minimum Required Setup
 
