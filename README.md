@@ -12,12 +12,14 @@ Example repository structure for a PyHEP style "notebook talk"
 Before getting into the specifics of how to setup a repository to make it runnable with Binder and preservable with Zenodo, it is a good idea to first think about how to give a talk with a Jupyter notebook.
 [Jim Pivarski](https://github.com/jpivarski) has a very good June 2021 PyHEP Topical meeting talk all about things to think about and consider when giving a talk with a Jupyter notebook: [How to give a good Jupyter talk](https://indico.cern.ch/event/1044648/)
 
-## Minimum Required Setup
+## Interactivity with Binder
+
+### Minimum Required Setup
 
 The minimum setup required is simply a repository with the Jupyter notebook that you'll be using and the `requirements.txt` or environment config file that is used to specify and install all of your code's dependencies.
 Note that it is rather important to **exactly** specify the requirements with `==` to avoid the repository code breaking in the future.
 
-## Recommended Setup
+### Recommended Setup
 
 Ideally, in addition to the minimum requirements, you'll also make the repository runnable on [Binder](https://mybinder.org/).
 The easiest way to do this is to simply ensure that _all_ of your dependencies are properly specified in your `requirements.txt` file and then to create a `binder` directory in the top level of the repository and place the `requirements.txt` file in it.
@@ -36,7 +38,7 @@ and its badge
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
 
-### Jupyter Lab Optional Launcher
+#### Jupyter Lab Optional Launcher
 
 If you'd like to have your Binder badge [launch into a JupyterLab environment](https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab) instead of Jupyter Notebook have the URL end with `?urlpath=lab/tree/path-to-the-notebook-you-want.ipynb`.
 
