@@ -44,6 +44,8 @@ If you'd like to have your Binder badge [launch into a JupyterLab environment](h
 
 ## Zenodo DOIs
 
+### Recommended System: Preservation with Binder support
+
 To preserve the repository with your talk as best as possible, have [Zenodo](https://zenodo.org/) build a Zenodo archive and mint a DOI for your repository.
 To do this:
 
@@ -52,7 +54,7 @@ To do this:
 3. Create a new GitHub release to trigger an archive capture.
 4. Add the minted DOI to your repository as a badge.
 
-This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP community colleciton on Zenodo. c.f. [PyHEP 2020's Zenodo community](https://zenodo.org/communities/pyhep2020) as an example.
+This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP community collection on Zenodo. c.f. [PyHEP 2020's Zenodo community](https://zenodo.org/communities/pyhep2020) as an example.
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
 
@@ -65,6 +67,13 @@ https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipy
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
 
 Once talks are published, the Zenodo DOI is the preferred way to launch Binder links so that it will be stable far into the future.
+
+### Default system: Preservation without Binder support
+
+The preferred system for repository preservation on Zenodo is **not required** for your talk and repository to be preserved in the PyHEP Zenodo community collection.
+The PyHEP workshop organizers will manually archive any talks that do not already have Zenodo DOIs into a community collection.
+However, support for building Binder images from Zenodo DOIs is **only** available for projects that have been archived through the [Zenodo GitHub interface](https://zenodo.org/account/settings/github/).
+If a project is manually archived, the built Binder image will launch into a Jupyter server with a `.zip` file of the Zenodo archive in it, instead of the unpacked archive.
 
 ## Installation
 
