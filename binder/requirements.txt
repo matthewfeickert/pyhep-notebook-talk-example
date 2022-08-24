@@ -1,4 +1,4 @@
-awkward==1.3.0
-hist[plot]==2.3.0
+awkward>=1.8.0
+hist[plot]~=2.6.0
 # Ensure Jupyter notebook
 jupyter~=1.0
