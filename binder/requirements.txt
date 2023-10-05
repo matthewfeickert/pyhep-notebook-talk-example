@@ -1,4 +1,5 @@
-awkward==1.8.0
-hist[plot]==2.6.1
+awkward==2.4.4
+hist[plot]==2.7.2
 # Ensure Jupyter notebook
-jupyter~=1.0
+notebook~=7.0
+jupyterlab~=4.0
