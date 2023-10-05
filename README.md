@@ -9,6 +9,9 @@ Example repository structure for a PyHEP style "notebook talk"
 
 ## Presentation Resources
 
+> **PyHEP 2023 Update:** PyHEP 2023 will be using a BinderHub that has been deployed by IRIS-HEP's [Scalable Systems Laboratory](https://iris-hep.org/ssl.html) (SSL) at https://binderhub.ssl-hep.org/ which requires authentication with CILogon.
+The instructions are the same as from previous years, with the exception of all urls that use `mybinder.org` will now use `binderhub.ssl-hep.org`.
+
 Before getting into the specifics of how to setup a repository to make it runnable with Binder and preservable with Zenodo, it is a good idea to first think about how to give a talk with a Jupyter notebook.
 [Jim Pivarski](https://github.com/jpivarski) has a very good June 2021 PyHEP Topical meeting talk all about things to think about and consider when giving a talk with a Jupyter notebook: [How to give a good Jupyter talk](https://indico.cern.ch/event/1044648/)
 
@@ -26,18 +29,18 @@ The easiest way to do this is to simply ensure that _all_ of your dependencies a
 Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html) there.
 Additionally, specifying the version of Python that should be used to run the code in a [`runtime.txt` file](https://mybinder.readthedocs.io/en/latest/using/config_files.html#runtime-txt-specifying-runtimes) under the `binder` directory is useful.
 
-Once these requirements have been met and commit to your repository if you visit [mybinder.org](https://mybinder.org/) and paste the URL of your GitHub repostiory (or Zenodo DOI!) into the text box, Binder will generate a badge for your repository README.
+Once these requirements have been met and commit to your repository if you visit [binderhub.ssl-hep.org](https://binderhub.ssl-hep.org/) and paste the URL of your GitHub repository (or Zenodo DOI!) into the text box, Binder will generate a badge for your repository README.
 If a user just clicks that badge, the Binder build will run if there already isn't a built image for it and then launch the user into an interactive session inside of the image running on Binder Federation resources.
 
 Below is an example of a URL that will launch the `talk.ipynb` notebook in this repository into a JupyterLab environment.
 
 ```
-https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb
+https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb
 ```
 
 and its badge
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
 
 #### Jupyter Lab Optional Launcher
 
@@ -62,10 +65,10 @@ You can create a Binder launch URL **from a Zenodo DOI** which will build the Do
 The following URL and badge will launch a Binder session built from the Zenodo archive
 
 ```
-https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb
+https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb
 ```
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
 
 Once talks are published, the Zenodo DOI is the preferred way to launch Binder links so that it will be stable far into the future.
 
