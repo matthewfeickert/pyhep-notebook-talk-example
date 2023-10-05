@@ -23,7 +23,8 @@ Note that it is rather important to **exactly** specify the requirements with `=
 
 Ideally, in addition to the minimum requirements, you'll also make the repository runnable on [Binder](https://mybinder.org/).
 The easiest way to do this is to simply ensure that _all_ of your dependencies are properly specified in your `requirements.txt` file and then to create a `binder` directory in the top level of the repository and place the `requirements.txt` file in it.
-Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/config_files.html) there.
+Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html) there.
+Additionally, specifying the version of Python that should be used to run the code in a [`runtime.txt` file](https://mybinder.readthedocs.io/en/latest/using/config_files.html#runtime-txt-specifying-runtimes) under the `binder` directory is useful.
 
 Once these requirements have been met and commit to your repository if you visit [mybinder.org](https://mybinder.org/) and paste the URL of your GitHub repostiory (or Zenodo DOI!) into the text box, Binder will generate a badge for your repository README.
 If a user just clicks that badge, the Binder build will run if there already isn't a built image for it and then launch the user into an interactive session inside of the image running on Binder Federation resources.
