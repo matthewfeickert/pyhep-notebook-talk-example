@@ -13,7 +13,7 @@ Example repository structure for a PyHEP style "notebook talk"
 The instructions are the same as from previous years, with the exception of all urls that use `mybinder.org` will now use `binderhub.ssl-hep.org`.
 
 Before getting into the specifics of how to setup a repository to make it runnable with Binder and preservable with Zenodo, it is a good idea to first think about how to give a talk with a Jupyter notebook.
-[Jim Pivarski](https://github.com/jpivarski) has a very good June 2021 PyHEP Topical meeting talk all about things to think about and consider when giving a talk with a Jupyter notebook: [How to give a good Jupyter talk](https://indico.cern.ch/event/1044648/)
+[Jim Pivarski](https://github.com/jpivarski) has a very good June 2021 PyHEP Topical meeting talk all about things to think about and consider when giving a talk with a Jupyter notebook: [How to give a good Jupyter talk](https://indico.cern.ch/event/1044648/).
 
 ## Interactivity with Binder
 
@@ -55,10 +55,10 @@ To do this:
 
 1. Create an account on [zenodo.org](https://zenodo.org/).
 2. [Follow the instructions](https://zenodo.org/account/settings/github/) on syncing GitHub repositories that you control with Zenodo.
-3. Create a new GitHub release to trigger an archive capture.
+3. Create a new GitHub release (e.g. "pyhep-2023) to trigger an archive capture.
 4. Add the minted DOI to your repository as a badge.
 
-This DOI can then be used by PyHEP to add your Zenodo archive to a PyHEP community collection on Zenodo. c.f. [PyHEP 2020's Zenodo community](https://zenodo.org/communities/pyhep2020) as an example.
+This DOI can then be used by the PyHEP workshop organizers to add your Zenodo archive to the relevant PyHEP community collection on Zenodo. c.f. [PyHEP 2023's Zenodo community](https://zenodo.org/communities/pyhep2023) as an example.
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
 
