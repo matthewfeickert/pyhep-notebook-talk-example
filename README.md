@@ -14,7 +14,7 @@ Example repository structure for a PyHEP style "notebook talk"
 > A walkthrough video of the workflow is also [available on the HSF YouTube channel](https://youtu.be/4D6eYHNQip0).
 >
 > **N.B.:** The CILogon identity providers that will work for the SSL BinderHub are verified institutions with signed agreements.
-> This means that CERN and any university will work, but Google and GitHub will not.
+> This means that CERN and any university will work, but Google and GitHub may not.
 > If you do not have an affiliation with a verified institution you won't be able to use the SSL BinderHub but you can follow along on the public mybinder BinderHub at http://mybinder.org/.
 
 Before getting into the specifics of how to setup a repository to make it runnable with Binder and preservable with Zenodo, it is a good idea to first think about how to give a talk with a Jupyter notebook.
