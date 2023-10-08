@@ -40,12 +40,12 @@ If a user just clicks that badge, the Binder build will run if there already isn
 Below is an example of a URL that will launch the `talk.ipynb` notebook in this repository into a JupyterLab environment.
 
 ```
-https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?labpath=talk.ipynb
+https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb
 ```
 
 and its badge
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?labpath=talk.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
 
 #### Jupyter Lab Optional Launcher
 
@@ -70,10 +70,10 @@ You can create a Binder launch URL **from a Zenodo DOI** which will build the Do
 The following URL and badge will launch a Binder session built from the Zenodo archive
 
 ```
-https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?labpath=talk.ipynb
+https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb
 ```
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?labpath=talk.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/zenodo/10.5281/zenodo.5041728/?urlpath=lab/tree/talk.ipynb)
 
 Once talks are published, the Zenodo DOI is the preferred way to launch Binder links so that it will be stable far into the future.
 
