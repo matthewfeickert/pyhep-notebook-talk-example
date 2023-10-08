@@ -52,6 +52,37 @@ and its badge
 By default if you provide a path for a notebook to open to BinderHub it will launch it in a "`labpath`" view [JupyterLab environment](https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab) with the notebook as the only view (the JupyterLab file browser will be minimized) and the URL will end with `?labpath=path-to-the-notebook-you-want.ipynb`.
 If you would like to have the JupyterLab browser be visible by default you can use instead a `urlpath` view and end the URL with `?urlpath=lab/tree/path-to-the-notebook-you-want.ipynb`
 
+## Local Testing
+
+To test your Binderized setup locally you can use the [`repo2docker`](https://github.com/jupyterhub/repo2docker) command line utility.
+Install [`jupyter-repo2docker` from PyPI](https://pypi.org/project/jupyter-repo2docker/)
+
+```
+python -m pip install --upgrade jupyter-repo2docker
+```
+
+and then either point `repo2docker` at your local directory
+
+```
+repo2docker .
+```
+
+or point `repo2docker` to a Git URL for the repository
+
+```
+repo2docker <Git repository URL>
+```
+
+See
+
+```
+repo2docker --help
+```
+
+for more information.
+
+BinderHub uses `repo2docker` under the hood to provide the build functionality.
+
 ## Zenodo DOIs
 
 ### Recommended System: Preservation with Binder support
