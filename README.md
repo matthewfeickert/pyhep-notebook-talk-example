@@ -47,9 +47,10 @@ and its badge
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/gh/matthewfeickert/pyhep-notebook-talk-example/HEAD?urlpath=lab/tree/talk.ipynb)
 
-#### Jupyter Lab Optional Launcher
+#### Jupyter Lab file browser visible at launch
 
-If you'd like to have your Binder badge [launch into a JupyterLab environment](https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab) instead of Jupyter Notebook have the URL end with `?urlpath=lab/tree/path-to-the-notebook-you-want.ipynb`.
+By default if you provide a path for a notebook to open to BinderHub it will launch it in a "`labpath`" view [JupyterLab environment](https://mybinder.readthedocs.io/en/latest/howto/user_interface.html#jupyterlab) with the notebook as the only view (the JupyterLab file browser will be minimized) and the URL will end with `?labpath=path-to-the-notebook-you-want.ipynb`.
+If you would like to have the JupyterLab browser be visible by default you can use instead a `urlpath` view and end the URL with `?urlpath=lab/tree/path-to-the-notebook-you-want.ipynb`
 
 ## Zenodo DOIs
 
