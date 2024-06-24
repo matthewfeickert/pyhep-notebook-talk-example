@@ -9,7 +9,7 @@ Example repository structure for a PyHEP style "notebook talk"
 
 ## Presentation Resources
 
-> **PyHEP 2023 Update:** PyHEP 2023 will be using a BinderHub that has been deployed by IRIS-HEP's [Scalable Systems Laboratory](https://iris-hep.org/ssl.html) (SSL) at https://binderhub.ssl-hep.org/ which requires authentication with CILogon.
+> **PyHEP 2024 Update:** PyHEP 2024 will be using a BinderHub that has been deployed by IRIS-HEP's [Scalable Systems Laboratory](https://iris-hep.org/ssl.html) (SSL) at https://binderhub.ssl-hep.org/ which requires authentication with CILogon.
 > The instructions are the same as from previous years, with the exception of all urls that use `mybinder.org` will now use `binderhub.ssl-hep.org`.
 > A walkthrough video of the workflow is also [available on the HSF YouTube channel](https://youtu.be/4D6eYHNQip0).
 >
@@ -92,10 +92,10 @@ To do this:
 
 1. Create an account on [zenodo.org](https://zenodo.org/).
 2. [Follow the instructions](https://zenodo.org/account/settings/github/) on syncing GitHub repositories that you control with Zenodo.
-3. Create a new GitHub release (e.g. "pyhep-2023) to trigger an archive capture.
+3. Create a new GitHub release (e.g. "pyhep-2024) to trigger an archive capture.
 4. Add the minted DOI to your repository as a badge.
 
-This DOI can then be used by the PyHEP workshop organizers to add your Zenodo archive to the relevant PyHEP community collection on Zenodo. c.f. [PyHEP 2023's Zenodo community](https://zenodo.org/communities/pyhep2023) as an example.
+This DOI can then be used by the PyHEP workshop organizers to add your Zenodo archive to the relevant PyHEP community collection on Zenodo, namely [PyHEP 2024's Zenodo community](https://zenodo.org/communities/pyhep2024).
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
 
