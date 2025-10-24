@@ -8,6 +8,7 @@ version = "0.1.0"
 depends-on = ["lab"]
 
 [dependencies]
+python = "3.12.*"
 awkward = ">=2.8.9,<3"
 hist = ">=2.9.0,<3"
 matplotlib = ">=3.10.7,<4"
