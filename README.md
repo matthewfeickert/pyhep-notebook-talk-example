@@ -9,7 +9,7 @@ Example repository structure for a PyHEP style "notebook talk"
 
 ## Presentation Resources
 
-> **PyHEP 2024 Update:** PyHEP 2024 will be using a BinderHub that has been deployed by IRIS-HEP's [Scalable Systems Laboratory](https://iris-hep.org/ssl.html) (SSL) at https://binderhub.ssl-hep.org/ which requires authentication with CILogon.
+> **PyHEP 2025 Update:** PyHEP 2025 will be using a BinderHub that has been deployed by IRIS-HEP's [Scalable Systems Laboratory](https://iris-hep.org/ssl.html) (SSL) at https://binderhub.ssl-hep.org/ which requires authentication with CILogon.
 > The instructions are the same as from previous years, with the exception of all urls that use `mybinder.org` will now use `binderhub.ssl-hep.org`.
 > A walkthrough video of the workflow is also [available on the HSF YouTube channel](https://youtu.be/4D6eYHNQip0).
 >
@@ -80,7 +80,7 @@ If you would like to have the JupyterLab browser be visible by default you can u
 ## Local Testing
 
 To test your Binderized setup locally you can use the [`repo2docker`](https://github.com/jupyterhub/repo2docker) command line utility.
-Install [`jupyter-repo2docker`] either [from conda-forge](https://github.com/conda-forge/jupyter-repo2docker-feedstock)
+Install `jupyter-repo2docker` either [from conda-forge](https://github.com/conda-forge/jupyter-repo2docker-feedstock)
 
 ```
 pixi global install jupyter-repo2docker
