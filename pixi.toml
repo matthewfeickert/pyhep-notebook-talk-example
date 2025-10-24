@@ -1,0 +1,25 @@
+[workspace]
+channels = ["conda-forge"]
+name = "pyhep-notebook-talk-example"
+platforms = ["linux-64", "osx-arm64"]
+version = "0.1.0"
+
+[tasks.start]
+depends-on = ["lab"]
+
+[dependencies]
+awkward = ">=2.8.9,<3"
+hist = ">=2.9.0,<3"
+matplotlib = ">=3.10.7,<4"
+mplhep = ">=0.4.1,<0.5"
+
+[feature.lab.dependencies]
+notebook = ">=7.4.7,<8"
+jupyterlab = ">=4.4.10,<5"
+pixi-kernel = ">=0.6.7,<0.7"
+
+[feature.lab.tasks.lab]
+cmd = "jupyter lab"
+
+[environments]
+lab = ["lab"]
