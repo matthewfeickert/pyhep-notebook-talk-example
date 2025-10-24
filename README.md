@@ -39,6 +39,13 @@ The easiest way to do this is to simply ensure that you have a Pixi manifest wit
 curl -sL https://raw.githubusercontent.com/matthewfeickert/pyhep-notebook-talk-example/refs/heads/main/binder/postBuild -o binder/postBuild
 ```
 
+> [!CAUTION]
+> As of [October 2025](https://github.com/jupyterhub/repo2docker/releases/tag/2025.08.0), `repo2docker`, which underpins Binder, does not have Python 3.13+ support.
+> So the most modern Python `binder/runtime.txt` is
+> ```
+> python-3.12
+> ```
+
 Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html) there.
 Additionally, specifying the version of Python that should be used to run the code in a `runtime.txt` file under the `binder` directory is useful.
 
