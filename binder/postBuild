@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -ex
+
+# Install Pixi
+curl -fsSL https://pixi.sh/install.sh | sh
+. ~/.bashrc
+# Sourcing ~/.bashrc doesn't seem to pick up changes, so manually set PATH
+export PATH="~/.pixi/bin:${PATH}"
+
+# Export workspace to conda explicit spec
+pixi workspace export conda-explicit-spec --platform linux-64 binder/
+
+# Install environment
+mamba install --name notebook --file binder/default_linux-64_conda_spec.txt
