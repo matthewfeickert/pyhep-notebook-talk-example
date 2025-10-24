@@ -22,17 +22,25 @@ Before getting into the specifics of how to setup a repository to make it runnab
 
 ## Interactivity with Binder
 
-### Minimum Required Setup
+### Minimum Required Setup (not recommended)
 
-The minimum setup required is simply a repository with the Jupyter notebook that you'll be using and the `requirements.txt` or environment config file that is used to specify and install all of your code's dependencies.
+The minimum setup required is simply a repository with the Jupyter notebook that you'll be using and the environment config file (either conda `environment.yaml` or Python `requirements.txt`) that is used to specify and install all of your code's dependencies.
 Note that it is rather important to **exactly** specify the requirements with `==` to avoid the repository code breaking in the future.
 
 ### Recommended Setup
 
+We strongly recommend that you use [Pixi](https://pixi.sh/)!
+
 Ideally, in addition to the minimum requirements, you'll also make the repository runnable on [Binder](https://mybinder.org/).
-The easiest way to do this is to simply ensure that _all_ of your dependencies are properly specified in your `requirements.txt` file and then to create a `binder` directory in the top level of the repository and place the `requirements.txt` file in it.
-Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/using/config_files.html) there.
-Additionally, specifying the version of Python that should be used to run the code in a [`runtime.txt` file](https://mybinder.readthedocs.io/en/latest/using/config_files.html#runtime-txt-specifying-runtimes) under the `binder` directory is useful.
+
+The easiest way to do this is to simply ensure that you have a Pixi manifest with _all_ of your dependencies defined in the `default` environment and then to create a `binder` directory in the top level of the repository and create a `binder/runtime.txt` that matches your Python version and then copy the example `binder/postBuild` in this repository.
+
+```
+curl -sL https://raw.githubusercontent.com/matthewfeickert/pyhep-notebook-talk-example/refs/heads/main/binder/postBuild -o binder/postBuild
+```
+
+Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html) there.
+Additionally, specifying the version of Python that should be used to run the code in a `runtime.txt` file under the `binder` directory is useful.
 
 Once these requirements have been met and commit to your repository if you visit [binderhub.ssl-hep.org](https://binderhub.ssl-hep.org/) and paste the URL of your GitHub repository (or Zenodo DOI!) into the text box, Binder will generate a badge for your repository README.
 If a user just clicks that badge, the Binder build will run if there already isn't a built image for it and then launch the user into an interactive session inside of the image running on Binder Federation resources.
@@ -55,10 +63,16 @@ If you would like to have the JupyterLab browser be visible by default you can u
 ## Local Testing
 
 To test your Binderized setup locally you can use the [`repo2docker`](https://github.com/jupyterhub/repo2docker) command line utility.
-Install [`jupyter-repo2docker` from PyPI](https://pypi.org/project/jupyter-repo2docker/)
+Install [`jupyter-repo2docker`] either [from conda-forge](https://github.com/conda-forge/jupyter-repo2docker-feedstock)
 
 ```
-python -m pip install --upgrade jupyter-repo2docker
+pixi global install jupyter-repo2docker
+```
+
+or [from PyPI](https://pypi.org/project/jupyter-repo2docker/)
+
+```
+uv pip install --upgrade jupyter-repo2docker
 ```
 
 and then either point `repo2docker` at your local directory
@@ -118,8 +132,15 @@ If a project is manually archived, the built Binder image will launch into a Jup
 
 ## Installation
 
-In a clean virtual environment install the dependencies (which are under the `binder` directory)
+1. Install [Pixi](https://pixi.sh/latest/installation/)
+2. Run
 
-```console
-python -m pip install -r binder/requirements.txt
+```
+pixi install
+```
+
+or just
+
+```
+pixi run start
 ```
