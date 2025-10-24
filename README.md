@@ -123,10 +123,10 @@ To do this:
 
 1. Create an account on [zenodo.org](https://zenodo.org/).
 2. [Follow the instructions](https://zenodo.org/account/settings/github/) on syncing GitHub repositories that you control with Zenodo.
-3. Create a new GitHub release (e.g. "pyhep-2024) to trigger an archive capture.
+3. Create a new GitHub release (e.g. "pyhep-2025) to trigger an archive capture.
 4. Add the minted DOI to your repository as a badge.
 
-This DOI can then be used by the PyHEP workshop organizers to add your Zenodo archive to the relevant PyHEP community collection on Zenodo, namely [PyHEP 2024's Zenodo community](https://zenodo.org/communities/pyhep2024).
+This DOI can then be used by the PyHEP workshop organizers to add your Zenodo archive to the relevant PyHEP community collection on Zenodo, namely [PyHEP 2025's Zenodo community](https://zenodo.org/communities/pyhep2025).
 
 You can create a Binder launch URL **from a Zenodo DOI** which will build the Docker image from the contents of the Zenodo archive.
 
