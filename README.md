@@ -49,6 +49,16 @@ curl -sL https://raw.githubusercontent.com/matthewfeickert/pyhep-notebook-talk-e
 Binder knows to look for configuration files under the `binder` directory so you can put all of your [Binder configuration files](https://mybinder.readthedocs.io/en/latest/examples/sample_repos.html) there.
 Additionally, specifying the version of Python that should be used to run the code in a `runtime.txt` file under the `binder` directory is useful.
 
+> [!CAUTION]
+> The `binder/postBuild` system implemented here **requires** that all dependencies are conda packages.
+> If you have dependencies that **only** exist as Python packages (sdists, wheels, or source installs) then you will need to add a line to the end of `binder/postBuild` that manually installs them (ideally from a top level `requirements.txt` file where they are pinned).
+> e.g.
+> ```bash
+> ...
+>
+> python -m pip install -r ./requirements.txt
+> ```
+
 Once these requirements have been met and commit to your repository if you visit [binderhub.ssl-hep.org](https://binderhub.ssl-hep.org/) and paste the URL of your GitHub repository (or Zenodo DOI!) into the text box, Binder will generate a badge for your repository README.
 If a user just clicks that badge, the Binder build will run if there already isn't a built image for it and then launch the user into an interactive session inside of the image running on Binder Federation resources.
 
