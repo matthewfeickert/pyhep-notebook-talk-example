@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -ex
 
 # Install Pixi
 curl -fsSL https://pixi.sh/install.sh | sh
+echo 'eval "$(pixi completion --shell bash)"' >> ~/.bashrc
 . ~/.bashrc
 # Sourcing ~/.bashrc doesn't seem to pick up changes, so manually set PATH
 export PATH="~/.pixi/bin:${PATH}"
